@@ -35,3 +35,4 @@
    const analytics = getAnalytics(app);
 4.npm run dev in the terminal
    
+**There is alse a docker file that you could use, try it**
