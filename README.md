@@ -12,14 +12,26 @@
    Copy Firebase config and create firebaseConfig.js in ssrc/:
 
    ```sh
+   // Import the functions you need from the SDKs you need
+   import { initializeApp } from "firebase/app";
+   import { getAnalytics } from "firebase/analytics";
+   // TODO: Add SDKs for Firebase products that you want to use
+   // https://firebase.google.com/docs/web/setup#available-libraries
+   
+   // Your web app's Firebase configuration
+   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
    const firebaseConfig = {
-     apiKey: your_API,
-     authDomain:your_dauth_domain,
-     projectId:your_project_id,
-     storageBucket: your_storage_bucket ,
-     messagingSenderId: your_messaging_sender_id,
-     appId: your_app_id,
+     apiKey: "your_api_key",
+     authDomain: "your_auth_domain",
+     projectId: "your_project_id",
+     storageBucket: "your_storage_bucket",
+     messagingSenderId: "your_messaging_sender_id",
+     appId: "your_app_id",
+     measurementId: "your_measure_id"
    };
-   export default firebaseConfig;
+   
+   // Initialize Firebase
+   const app = initializeApp(firebaseConfig);
+   const analytics = getAnalytics(app);
 4.npm run dev in the terminal
    
